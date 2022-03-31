@@ -99,7 +99,7 @@
 <div class="content">
 
 
-    <form>
+    <form enctype="multipart/form-data" method="post" action="https://vc3xvbvii7.execute-api.us-east-1.amazonaws.com/default/split-cells">
         <div class="field">
             <label for="upload">1. Select the .xlsx file</label>
             <input id="upload" name="upload" type="file" required accept=".xlsx">
@@ -125,7 +125,7 @@
             <label for="delimiter">4. How are the values delimited </label>
             <select id="delimiter" name="delimiter" required>
                 <option value="">Select Delimiter</option>
-                <option value="\n">New Line &quot;&bsol;n&quot;</option>
+                <option value="nl">New Line &quot;&bsol;n&quot;</option>
                 <option value=",">Comma &quot;&comma;&quot;</option>
                 <option value="|">Pipe &quot;|&quot;</option>
                 <option value=";">Semicolon &quot;&semi;&quot;</option>

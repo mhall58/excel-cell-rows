@@ -3,6 +3,8 @@ module github.com/mhall58/excel-cell-rows
 go 1.17
 
 require (
+	github.com/aws/aws-lambda-go v1.29.0
+	github.com/grokify/go-awslambda v0.1.5
 	github.com/spf13/cobra v1.4.0
 	github.com/xuri/excelize/v2 v2.5.0
 )
