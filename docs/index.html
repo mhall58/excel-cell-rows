@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Excel: Split Cell to Rows</title>
+    <link rel="stylesheet" href="normalize.css">
     <style>
         body {
             background-color: lightslategray;
-            color: wheat;
+            color: whitesmoke;
             padding: 25px;
-            font-family: Arial;
+            font-family: Arial, serif;
+            font-size: 16px;
         }
+
 
         .content {
             max-width: 800px;
@@ -39,6 +42,11 @@
             margin-top: 5px;
             color: grey;
             width: 300px;
+        }
+
+        .footer {
+            text-align: center;
+            max-width: 800px;
         }
     </style>
 </head>
@@ -99,7 +107,8 @@
 <div class="content">
 
 
-    <form enctype="multipart/form-data" method="post" action="https://vc3xvbvii7.execute-api.us-east-1.amazonaws.com/default/split-cells">
+    <form enctype="multipart/form-data" method="post"
+          action="https://vc3xvbvii7.execute-api.us-east-1.amazonaws.com/default/split-cells">
         <div class="field">
             <label for="upload">1. Select the .xlsx file</label>
             <input id="upload" name="upload" type="file" required accept=".xlsx">
@@ -125,6 +134,7 @@
             <label for="delimiter">4. How are the values delimited </label>
             <select id="delimiter" name="delimiter" required>
                 <option value="">Select Delimiter</option>
+                <option value=" ">Space &quot; &quot;</option>
                 <option value="nl">New Line &quot;&bsol;n&quot;</option>
                 <option value=",">Comma &quot;&comma;&quot;</option>
                 <option value="|">Pipe &quot;|&quot;</option>
@@ -141,6 +151,18 @@
     <div class="note" style="width: auto"><i>Note: Data is processed in memory only. File is not saved on the server.
         Using this
         service is not logged.</i></div>
+</div>
+<div class="footer">Matthew Hall | <a href="mailto:matthewhall58@gmail.com">matthewhall58@gmail.com</a> | &copy; 2022 |
+    <form style="display: inline-block; vertical-align: middle" action="https://www.paypal.com/donate" method="post"
+          target="_top">
+        <input type="hidden" name="business" value="75WV43U9FEWV6"/>
+        <input type="hidden" name="no_recurring" value="1"/>
+        <input type="hidden" name="currency_code" value="USD"/>
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit"
+               title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button"/>
+        <img style="margin-top: 10px;" alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1"
+             height="1"/>
+    </form>
 </div>
 </body>
 </html>
